@@ -8,6 +8,10 @@ blogsRouter.get("/", (request, response) => {
 });
 
 blogsRouter.post("/", (request, response) => {
+  if (!("likes" in request.body)) {
+    request.body = { ...request.body, likes: 0 };
+  }
+
   const blog = new Blog(request.body);
 
   blog.save().then((savedBlog) => {

@@ -65,6 +65,25 @@ test("a valid blog post can be added", async () => {
   expect(contents).toContain("Yanks post");
 });
 
+test("if likes property is missing from request, it will default to the value 0", async () => {
+  const minimalBlogPost = {
+    title: "nashabaynyah",
+    author: "Jiggy",
+    url: "https://techcrunch.com/",
+  };
+
+  await api
+    .post("/api/blogs")
+    .send(minimalBlogPost)
+    .expect(201)
+    .expect("Content-Type", /application\/json/);
+  const response = await api.get("/api/blogs");
+
+  const likes = response.body[response.body.length - 1].likes;
+
+  expect(likes).toBe(0);
+});
+
 afterAll(() => {
   mongoose.connection.close();
 });
