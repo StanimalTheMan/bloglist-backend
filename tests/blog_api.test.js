@@ -84,6 +84,15 @@ test("if likes property is missing from request, it will default to the value 0"
   expect(likes).toBe(0);
 });
 
+test("if title and url properties are missing from the request data, response will have a status code of 400 Bad Request", async () => {
+  const badPost = {
+    author: "Eric",
+    likes: 98,
+  };
+
+  await api.post("/api/blogs").send(badPost).expect(400);
+});
+
 afterAll(() => {
   mongoose.connection.close();
 });
