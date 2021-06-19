@@ -51,6 +51,10 @@ describe("addition of a new blog", () => {
 
     await api
       .post("/api/blogs")
+      .set(
+        "Authorization",
+        "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaWNjaG9pMjEyIiwiaWQiOiI2MGNkOTQ3ZTljMzYyYjkzNjVjZjZkMzIiLCJpYXQiOjE2MjQxMzE3NDB9.QSpxE4nmisjPeV1mPZXuyO-IlIeznU5R2dZMqKdJWjE"
+      )
       .send(newBlogPost)
       .expect(200)
       .expect("Content-Type", /application\/json/);
