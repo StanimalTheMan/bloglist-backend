@@ -1,10 +1,10 @@
 POST http://localhost:3003/api/blogs HTTP/1.1
 content-type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImVyaWNjaG9pMjEyIiwiaWQiOiI2MGNkOTQ3ZTljMzYyYjkzNjVjZjZkMzIiLCJpYXQiOjE2MjQxMjU2NTZ9.y2xNJmTCwoDr3W1obhHIuDv0pL3U8ByGy3cGB_eTrtw
 
 { 
-    "title": "Stanjy post3",
-    "author": "Stanimal",
-    "url": "https://www.amazinavenue.com/2021/6/18/22539396/mets-quotes-degrom-stroman-carrasco-alonso-pillar-injury-update",
-    "likes": 45,
-    "userId": "60cd61eb21ac5d8b4cc8f946"
+    "title": "Eric's fav blog post",
+    "author": "Eric Choi",
+    "url": "https://progolfnow.com/2021/06/18/2021-u-s-open-five-storylines-watch-saturday/",
+    "likes": 69
 }
