@@ -2,8 +2,9 @@ POST http://localhost:3003/api/blogs HTTP/1.1
 content-type: application/json
 
 { 
-    "title": "Stanjy post",
+    "title": "Stanjy post3",
     "author": "Stanimal",
-    "url": "https://www.amazinavenue.com/2021/6/14/22532886/mets-jacob-degrom-2021-stats-10-starts-history-seaver-gooden-pedro",
-    "likes": 74
+    "url": "https://www.amazinavenue.com/2021/6/18/22539396/mets-quotes-degrom-stroman-carrasco-alonso-pillar-injury-update",
+    "likes": 45,
+    "userId": "60cd61eb21ac5d8b4cc8f946"
 }
